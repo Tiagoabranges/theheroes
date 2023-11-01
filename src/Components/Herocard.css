@@ -1,0 +1,43 @@
+.hero-card {
+    border: 2px solid #0074e4;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+  }
+  
+  .hero-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .selected-hero-card {
+    border-color: #3fa652;
+  }
+  
+  .hero-card img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .hero-card h6 {
+    color: #0074e4;
+    font-weight: bold;
+  }
+  
+  .hero-card p {
+    color: #555;
+    margin: 0;
+  }
+  
+  .hero-card label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0074e4;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  

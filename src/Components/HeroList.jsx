@@ -3,6 +3,8 @@ import { useHeroContext } from '../context/HeroContext';
 import HeroCard from './HeroCard';
 import { Link } from 'react-router-dom';
 import Grid from '@mui/material/Grid';
+import { TextField } from '@mui/material';
+import './Herolist.css'; // Importe seu arquivo CSS para os estilos do HeroList
 
 function HeroList() {
   const { heroes, selectedHeroes, setSelectedHeroes } = useHeroContext();
@@ -26,18 +28,26 @@ function HeroList() {
   const canBattle = selectedHeroes.length === 2;
 
   return (
-    <div>
-      <input
-        type="text"
-        placeholder="Filtrar por nome"
+    <div className="hero-list-container">
+      <TextField
+        id="standard-basic"
+        label="Filtrar heroi"
+        variant="outlined"
+        className="filter-input"
+        InputProps={{
+          style: { color: 'white' },
+        }}
+        InputLabelProps={{
+          style: { color: 'white' },
+        }}
         value={filter}
         onChange={(e) => setFilter(e.target.value)}
       />
-      <Grid container spacing={2}>
+
+      <Grid container spacing={2} className="hero-card-container">
         {filteredHeroes.map((hero) => (
-          <Grid item xs={12} sm={6} md={3} lg={3} key={hero.id}>
+          <Grid item xs={12} sm={6} md={3} lg={2} key={hero.id}>
             <HeroCard
-              key={hero.id}
               hero={hero}
               isSelected={selectedHeroes.some(
                 (selectedHero) => selectedHero.id === hero.id
@@ -48,8 +58,8 @@ function HeroList() {
         ))}
       </Grid>
       {canBattle && (
-        <Link to="/battle">
-          <button>Batalha</button>
+        <Link to="/battle" className="battle-link">
+          <button className="battle-button">Batalha</button>
         </Link>
       )}
     </div>

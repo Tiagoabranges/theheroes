@@ -1,0 +1,57 @@
+.battle-container {
+    background: #1a1a1a;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .selected-heroes {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 20px 0;
+  }
+  
+  .selected-heroes h3 {
+    text-align: center;
+    color: #333;
+  }
+  
+  .hero-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .battle-button {
+    background: #0074e4;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .battle-button:hover {
+    background: #0056b3;
+  }
+  
+  .home-button {
+    margin-left: 155px;
+    background-color: #ffae00b3;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+
+  
+  .home-button:hover {
+    background-color: #0056b3;
+  }
+  

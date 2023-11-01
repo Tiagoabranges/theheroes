@@ -2,17 +2,16 @@ import React from 'react';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import Typography from '@mui/material/Typography';
 import Checkbox from '@mui/material/Checkbox';
+import './Herocard.css';
 
 function HeroCard({ hero, isSelected, onSelect }) {
-
   const handleCheckboxChange = () => {
     onSelect(!isSelected);
-  };
+  }
 
   return (
-    <Card sx={{ maxWidth: 225, margin: 2 }}>
+    <Card className={`hero-card ${isSelected ? 'selected-hero-card' : ''}`}>
       <CardMedia
         component="img"
         height="350"
@@ -20,8 +19,8 @@ function HeroCard({ hero, isSelected, onSelect }) {
         alt={hero.name}
       />
       <CardContent>
-        <Typography variant="h6">{hero.name}</Typography>
-        <Typography>Força: {hero.powerstats.strength}</Typography>
+        <h6>{hero.name}</h6>
+        <p>Força: {hero.powerstats.strength}</p>
         <label>
           <Checkbox checked={isSelected} onChange={handleCheckboxChange} />
           Selecionar

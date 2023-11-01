@@ -5,6 +5,8 @@ import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import CardMedia from '@mui/material/CardMedia';
+import { Link } from 'react-router-dom';
+import './Battle.css';
 
 function Battle() {
   const { selectedHeroes } = useHeroContext();
@@ -35,7 +37,7 @@ function Battle() {
   };
 
   return (
-    <div>
+    <div className='batle'>
       <h2>Batalha</h2>
       <div>
         <h3>Heróis Selecionados para Batalha:</h3>
@@ -68,6 +70,9 @@ function Battle() {
       <Button variant="contained" color="primary" onClick={handleBattle}>
         Iniciar Batalha
       </Button>
+        <Link to="/"> {/* Adicione um Link para a página inicial */}
+          <button className="home-button">Voltar para a Home</button>
+        </Link>
     </div>
   );
 }

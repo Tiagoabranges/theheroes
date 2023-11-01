@@ -1,0 +1,40 @@
+.hero-list-container {
+    background: #1a1a1a;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .filter-input {
+    background-color: #333;
+    width: 100%;
+  }
+  
+  .hero-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .battle-link {
+    text-align: center;
+    text-decoration: none;
+    margin-top: 20px;
+  }
+  
+  .battle-button {
+    background: #0074e4;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .battle-button:hover {
+    background: #0056b3;
+  }
+  
