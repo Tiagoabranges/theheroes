@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import HeroList from '../../Components/HeroList';
+import HeroList from '../../Components/HeroList/HeroList';
 import './Home.css';
 
 function Home() {
@@ -8,7 +8,7 @@ function Home() {
   const handleScrollToBottom = () => {
     window.scrollTo({
       top: document.body.scrollHeight,
-      behavior: 'smooth'
+      behavior: 'smooth',
     });
   };
 
@@ -28,7 +28,7 @@ function Home() {
       <HeroList />
       {showScrollButton && (
         <button className="scroll-button" onClick={handleScrollToBottom}>
-        botao de batalha
+          Botao de batalha
         </button>
       )}
     </div>

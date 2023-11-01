@@ -37,7 +37,7 @@ function Battle() {
   };
 
   return (
-    <div className='batle'>
+    <div className="batle">
       <h2>Batalha</h2>
       <div>
         <h3>Heróis Selecionados para Batalha:</h3>
@@ -70,9 +70,9 @@ function Battle() {
       <Button variant="contained" color="primary" onClick={handleBattle}>
         Iniciar Batalha
       </Button>
-        <Link to="/"> {/* Adicione um Link para a página inicial */}
-          <button className="home-button">Voltar para a Home</button>
-        </Link>
+      <Link to="/">
+        <button className="home-button">Voltar para a Home</button>
+      </Link>
     </div>
   );
 }

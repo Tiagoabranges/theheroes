@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { useHeroContext } from '../context/HeroContext';
-import HeroCard from './HeroCard';
+import { useHeroContext } from '../../context/HeroContext';
+import HeroCard from '../HeroCard/HeroCard';
 import { Link } from 'react-router-dom';
 import Grid from '@mui/material/Grid';
 import { TextField } from '@mui/material';
-import './Herolist.css'; // Importe seu arquivo CSS para os estilos do HeroList
+import './Herolist.css';
 
 function HeroList() {
   const { heroes, selectedHeroes, setSelectedHeroes } = useHeroContext();

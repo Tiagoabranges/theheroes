@@ -8,7 +8,7 @@ import './Herocard.css';
 function HeroCard({ hero, isSelected, onSelect }) {
   const handleCheckboxChange = () => {
     onSelect(!isSelected);
-  }
+  };
 
   return (
     <Card className={`hero-card ${isSelected ? 'selected-hero-card' : ''}`}>
